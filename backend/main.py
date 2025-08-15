@@ -8,7 +8,7 @@ CORS(app)
 
 @app.route("/length")
 def length():
-    pass
+    return "owo owo owo"
 
 
 @app.route("/weight")
