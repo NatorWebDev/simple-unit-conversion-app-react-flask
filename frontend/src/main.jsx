@@ -4,6 +4,9 @@ import App from './App.jsx'
 import "./app.css"
 import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
+import Length from "./components/length.jsx";
+import Weight from "./components/weight.jsx";
+import Temperature from "./components/temperature.jsx"
 
 
 const router = createBrowserRouter([
@@ -11,9 +14,9 @@ const router = createBrowserRouter([
     path: "/",
     element: <App />,
     children: [
-      { path: "length", element: <div>length</div> },
-      { path: "weight", element: <div>weight</div> },
-      { path: "temperature", element: <div>temperature</div> }
+      { path: "length", element: <Length /> },
+      { path: "weight", element: <Weight /> },
+      { path: "temperature", element: <Temperature /> }
     ]
   },
 ]);
