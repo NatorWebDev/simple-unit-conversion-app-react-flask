@@ -1,7 +1,7 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder="../frontend/dist", static_url_path="/")
 
 CORS(app)
 
@@ -129,8 +129,8 @@ def temperature():
 
 @app.route("/")
 def home():
-    return "<h1>Hola</h1>"
+    return send_from_directory(app.static_folder, "index.html")
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()

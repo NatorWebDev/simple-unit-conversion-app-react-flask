@@ -60,7 +60,7 @@ function App() {
 
   return (
     <>
-      <div className="flex items-center p-10 flex-col w-screen h-screen bg-[url(bg.png)] bg-cover bg-center">
+      <div className="flex items-center p-10 flex-col w-screen h-screen bg-[url(/bg.png)] bg-cover bg-center">
         <h1 className="m-4 text-xl font-semibold">Unit Converter</h1>
         <ul className="flex gap-4 justify-center">
           <li> <Link onClick={() => { setSpin(true); setTimeout(() => { setSpin(false) }, 1000) }} className={`${(location.pathname == "/length" ? "text-green-400 underline" : "")} p-4 select-none`} to={"/length"}>Length</Link> </li>

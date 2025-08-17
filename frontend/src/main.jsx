@@ -2,14 +2,14 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 import "./app.css"
-import { createBrowserRouter } from "react-router";
+import { createBrowserRouter, createHashRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
 import Length from "./components/length.jsx";
 import Weight from "./components/weight.jsx";
 import Temperature from "./components/temperature.jsx"
 
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <App />,
